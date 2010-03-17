@@ -1,0 +1,10 @@
+.post
+  %h2= summary
+  .body= summary.body
+  %h3 Comments
+  .comments
+    = "There are #{summary.comments.count} comments."
+    .links
+      %a{:href => "/comment/new?comment_post[commentable_id]=#{summary.id}"}
+        Add a comment!
+  %hr{:width => "75%"}

@@ -1,0 +1,12 @@
+- inherits_from :base
+
+- content_block :content do
+
+  %div
+    Create a new comment!
+    - unless v.comment_post.commentable.nil?
+      .comment_on
+        Comment on the blog post:
+        =v.comment_post.commentable
+
+  = partial :form
